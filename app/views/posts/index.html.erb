@@ -1,0 +1,10 @@
+<div class="page-header">
+  <div class="pull-right">
+    <%= link_to 'New Post', new_post_path, class: 'btn btn-info' %>
+  </div>
+  <h1> The Black Hole </h1>
+</div>
+<% @posts.each do |post| %>
+  <%= link_to post.title, post_path(post) %>
+  <hr>
+<% end %>
